@@ -1,17 +1,11 @@
-<script>
+<script setup>
 import { useStore } from 'vuex';
 
-export default {
-  setup() {
-    const store = useStore();
+const store = useStore();
 
-    function inc() {
-      store.dispatch('increment');
-    }
-
-    return { inc };
-  },
-};
+function inc() {
+  store.dispatch('increment');
+}
 </script>
 
 <template>

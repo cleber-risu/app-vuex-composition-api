@@ -1,18 +1,12 @@
-<script>
+<script setup>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 
-export default {
-  setup() {
-    const store = useStore();
+const store = useStore();
 
-    const counter = computed(() => {
-      return store.getters.counter;
-    });
-
-    return { counter };
-  },
-};
+const counter = computed(() => {
+  return store.getters.counter;
+});
 </script>
 
 <template>
